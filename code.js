@@ -1,4 +1,8 @@
 window.onload = function() {
+    let clickallower = true;
+    function clickallow(){
+        clickallower = true;
+    }
     // Login function
     document.getElementById("startclicking").addEventListener("click", function() {
         // Hides old elements
@@ -27,8 +31,14 @@ window.onload = function() {
         
         // Attach event listener to the dynamically created button
         clickbutton.addEventListener("click", function() {
+        if(clickallower == true){
             clicks++;
             click.innerText = `Value: ${clicks}`;
+            clickallower = false;
+            setTimeout(clickallow, 1000);
+        }
+            
+          
         });
     });
 };

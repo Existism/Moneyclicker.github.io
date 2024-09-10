@@ -5,7 +5,17 @@ html, body{
 }
 
 body {
-    background-color: aquamarine; 
+    background-image: url(https://static.vecteezy.com/system/resources/previews/004/314/465/original/cartoon-money-seamless-background-pattern-free-vector.jpg);
+    background-size: 100px 100px;
+    animation: background-loop 2s linear 0s infinite;
+}
+@keyframes background-loop{
+    from{
+        background-position: 0px 0px;
+    }
+    to{
+        background-position: 200px 200px;
+    }
 }
 
 h1 {
@@ -30,4 +40,25 @@ div button {
     width: 400px;
     height: 120px;
     border-width: 5px;
+}
+
+div button:active{
+    animation: buttonclick 0.2s ease-in-out;
+}
+@keyframes buttonclick{
+    0%{
+        width: 400px;
+        height: 120px;
+        color: grey;
+    }
+    25%{
+        font-size: 67px;
+        width:420px;
+        height:140px;
+    }
+    100%{
+        width: 400px;
+        height: 120px;
+        color: black;
+    }
 }
